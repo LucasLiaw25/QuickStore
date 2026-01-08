@@ -1,1 +1,22 @@
-spring.application.name=Order
+spring:
+  application:
+    name: Order
+  datasource:
+    url: jdbc:postgresql://localhost:5433/DB_ORDER
+    username: lucas
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  rabbitmq:
+    addresses: gorilla.lmq.cloudamqp.com
+    username: iophmrpo
+    password: lB8PghYkZs684IJHQYKQFprFe5hm6jTv
+    virtual-host: iophmrpo
+server:
+  port: 8082
